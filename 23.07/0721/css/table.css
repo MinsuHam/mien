@@ -1,0 +1,11 @@
+*{
+    text-align: center;
+}
+table{
+    width: 800px;
+}
+thead{
+    border-top: 2px dotted #000;
+    border-bottom: 2px dotted #000;
+
+}

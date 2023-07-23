@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        /* 인라인으로 레이아웃 설정하기 */
+        *{box-sizing: border-box;}
+        /* padding과 border은 box size를 늘린다. */
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color: yellowgreen;
+            /* 블록 박스를 가운데 정렬하는 방법 */
+            /* height는 적용X(margin-top,margin-bottom: auto), 스크롤 */
+            margin-left: auto;
+            margin-right: auto;
+            overflow: auto;
+            padding: 30px;
+            border: 5px solid #333;
+        }
+        /* margin은 아래와 같을 때 큰값=30px만 적용된다. */
+        p{
+            
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 60px;
+            font-weight: bold;
+            /* 대문자를 작게 표현 */
+            font-variant: small-caps;
+            text-align: center;
+            /* font: 20px arial, serif bold -> 폰트 축약 버전 */
+        }
+        /* block태그는 width 값과 height값을 가질 수 있다.
+        margin  top left right bottom모두 사용할 수 있다.
+
+        inline(a span...) 태그는 width, height 값을 가질수없다
+        margin은 left, right만 가능하다  */
+        a{
+            /* 기억해야 하는 것은 text-decoration: underline 또는 none; */
+            text-align: center;
+            text-decoration-line: underline;
+            text-decoration-style: wavy;
+        }
+        
+        img{
+            width: 400px;
+            vertical-align: top;
+        }
+        .boxin{
+            text-align: center;
+        }
+        .box2{
+            border: 1px solid black;
+            width: 300px;
+            height: 100px;
+            /* line-height: ; */
+            /* letter-spacing: 10px; */
+
+            /*들여쓰기*/
+            text-indent: -2100px; 
+        }
+        .nav{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #333;
+            margin-bottom: 30px;
+
+            text-align: center;
+            line-height: 200px;  
+        }
+        .pp{
+            width: 800px;
+            height: 400px;
+            border: 1px solid red;
+            white-space: pre-wrap;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Font.</h1>
+    <div class="box">
+        <div class="boxin">
+            <p>버그버그버그버그</p>
+            <a href="#">네이버</a>
+            <del>네이버</del>
+        </div>
+    </div>
+    <!-- <img class="box2" src="../images/sample.jpg" alt="8">기쁘며, 광야에서 실로 얼음 발휘하기 싹이 영락과  -->
+        <p class="box2"> 들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기
+            들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기
+            들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기
+        </p>
+        <div class="nav">
+            쇼핑몰
+        </div>
+        <div class="pp">
+            <p>사랑의 할지니, 싹이 이상은 있을 실로 아름다우냐?기쁘며, 광야에서 실로 얼음 발휘기쁘며, 
+                광야에서 실로 얼음 발휘기쁘며, 광야에서 실로 얼음 발휘기쁘며, 광야에서 실로 얼음 발휘기쁘며, 
+                광야에
+                서 실로 얼음 발휘기쁘며, 광야에서 실로 얼음 발휘기쁘며, 
+                광야에서 실로 얼음 발휘기쁘며, 광야에서 실로
+            얼음 발휘기쁘며, 광야에서 실로 얼음 발휘기쁘며, 광야에서 실로 얼음 발휘발휘발휘발휘발휘발휘발휘발휘발휘발휘발휘발휘발휘</p>
+        </div>
+
+</body>
+</html>

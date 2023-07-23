@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+    table, tr, td, th{
+            border: 1px solid #333;
+            border-collapse: collapse;
+            width: auto;
+            height: auto;
+        }
+        thead{
+            height: 40px;
+            
+        }
+        tbody{
+            height: 30px;
+        }
+        .count1, .count2{
+            text-align: center;
+        }
+        tr:nth-child(even)
+        {
+        background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption></caption>
+        <thead>
+            <tr class="title">
+                <th>번호</th><th>제목</th><th>이름</th><th>날짜</th><th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="count1">10</td><td>두테이블을합쳐서 보고싶습니다.</td><td>홍길동</td><td>2023.07.21</td><td class="count2">1</td>
+            </tr>
+            <tr>
+                <td class="count1">9</td><td>mysql에서 검색 기능 구현</td><td>홍길동</td><td>2023.07.21</td><td class="count2">1</td>
+            </tr>
+            <tr>
+                <td class="count1">8</td><td>mysql 피벗 질문입니다.</td><td>홍길동</td><td>2023.07.21</td><td class="count2">7</td>
+            </tr>
+            <tr>
+                <td class="count1">7</td><td>mariaDB 오류 문의</td><td>홍길동</td><td>2023.07.21</td><td class="count2">1</td>
+            </tr>
+            <tr>
+                <td class="count1">6</td><td>이런 건 DB로 관리하는게 맞을까요??</td><td>홍길동</td><td>2023.07.21</td><td class="count2">2</td>
+            </tr>
+            <tr>
+                <td class="count1">5</td><td>두테이블을 합쳐서 보고 싶습니다.</td><td>홍길동</td><td>2023.07.21</td><td class="count2">1</td>
+            </tr>
+            <tr>
+                <td class="count1">4</td><td>mysql에서 검색 기능 구현</td><td>홍길동</td><td>2023.07.21</td><td class="count2">4</td>
+            </tr>
+            <tr>
+                <td class="count1">3</td><td>mysql에 피벗 질문입니다.</td><td>홍길동</td><td>2023.07.21</td><td class="count2">1</td>
+            </tr>
+            <tr>
+                <td class="count1">2</td><td>mariaDB 오류 문의</td><td>홍길동</td><td>2023.07.21</td><td class="count2">2</td>
+            </tr>
+            <tr>
+                <td class="count1">1</td><td>이런 건 DB로 관리하는게 맞을까요??</td><td>홍길동</td><td>2023.07.21</td><td class="count2">1</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+</html>
