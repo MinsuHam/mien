@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/css.css">
+</head>
+<body>
+    <script>
+    //문제: 10부터 20까지의 수 중에서 홀수는 파랑색 글씨
+    //      짝수는 빨강색 글씨로 출력하세요.
+    let i = 20
+        while(i <= 30){
+            if( i % 2 == 0){
+                document.write("<span style= color:blue>" + i + "</span>" + "<br />");
+            } 
+            else{
+                document.write("<span style= color:red>" + i + "</span>" + "<br />");
+            }
+            i++;
+        }
+    </script>
+</body>
+</html>

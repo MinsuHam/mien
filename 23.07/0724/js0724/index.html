@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const loginId = "ezen";
+        const loginPass = "1234";
+
+        const userId = prompt("아이디를 입력", "");
+        const userPass = prompt("비밀번호를 입력?", "");
+        if(userId ==  loginId){
+            if(userPass == loginPass){
+                document.write("환영합니다 " + userId + "님");
+            }
+            else{
+                alert("비밀번호가 틀렸습니다.");
+                lovation.reloat();
+            }
+        }
+        else{
+            alert("아이디가 틀렸습니다.");
+            lovation.reloat();
+        }
+    </script>
+</body>
+</html>

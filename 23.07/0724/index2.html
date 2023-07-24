@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체 크기 고정 */
+        *{box-sizing: border-box;}
+        .container{
+            border: 1px solid #333;
+            width: 1330px;
+            /* 모니터 화면에 100% 넘기지 마라 (좌,우 스크롤x)*/
+            max-width: 100%;
+            padding: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .imgbox{
+            width: 250px;
+            border: 4px solid green;
+        }
+        .imgbox img{
+            max-width: 100%;
+            /* overflow: */
+        }
+        /* ul,ol은 기본적으로 margin과 padding값을 갖고 있다. */
+        ol{
+            list-style-type: upper-latin;
+            list-style-position: outside;
+        }
+        .box1{
+            width: 400px;
+            height: 400px;
+            background: red;
+            margin-top: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .box2{
+            width: 400px;
+            height: 400px;
+            background: blue;
+        }
+        .container2{
+            margin: 40px auto;
+            width: 800px;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        이 곳이 container입니다.
+        <div class="imgbox">
+            <img src="images/ap.png" alt="어피치" />
+        </div>
+    </div>
+        <div class="container2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+</body>
+</html>
