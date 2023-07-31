@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 300px;
+            border: 1px solid #999;
+            border-radius: 40px;
+            background: #a2f088;
+            position: fixed;
+
+            /* 블록이지만 position이 fixed나 absolute일 경우 
+            가운데 정렬을 아래와 같이 적용이 필요함 
+            인라인의 경우 text-align: center 적용*/
+            left: calc(50% - 250px);
+            top:  calc(50% - 150px);    
+
+            overflow: hidden;
+        }
+        img{
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../../0725/images/123.jpg" alt="8">
+
+    </div>
+</body>
+</html>

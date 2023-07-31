@@ -1,0 +1,79 @@
+객체 - 존재하는 모든 것
+	두 가지의 특성 - 생성자, 속성 , 기능(함수)
+	예) tv 객체 - 50인치, LGtv, 검정색..
+		tv켜다, 끄다. 채널을돌리다.
+javascript는 객체 기반 언어.
+
+   const 회사 = {
+    속성: 속성값
+    기능: 기능값
+}
+
+java 객체지향 언어
+class 회사{
+ //속성
+ 생성자 회사(){}
+ 일하다(){}
+}
+회사.기능();
+
+javascript의 내장 객체:
+문자(String), 날짜(Date), 배열(Array), 수학(Math)
+
+브라우저 객체 모델(BOM):
+location(주소창), window(브라우저), document(문서 영역), screen, history, navigator
+
+우리반
+철수, 영수, 민수, 순이, 영희
+
+배열을 선언하는 두 가지 방법
+let 우리반 = new Array("철수, 영수, 민수, 순이, 영희");
+let 우리반 = ["철수, 영수, 민수, 순이, 영희"];
+└>우리반[0]= "철수"
+body 18px
+└>1em = 18px
+em
+rem
+v는 뷰포트
+vw 1vw는 width = 1%
+vh 1vh는 height = 1%
+vmin
+vmax
+*transform
+translate() = 이동
+rotate() = 회전
+scale() = 크기
+skew() = 모서리 각도 조정
+matrix() = scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>close</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <a href="#" onclick="window.close()">이 페이지 닫기</a>
+    <!-- <a href="#" onclick="window.opener.location.href='https://naver.com'">부모 페이지 닫기</a> -->
+
+    <script>
+        const h = navigator.platform;
+        document.getElementById("demo").innerHTML = h;
+    </script>
+</body>
+</html>

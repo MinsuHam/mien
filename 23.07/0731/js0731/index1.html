@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let userName = prompt("당신의 영문 이름을 입력하세요.", "");
+        const upperName = userName.toUpperCase();
+        document.write("반갑습니다. " + upperName + "님");
+
+        let userNum = prompt("당신의 전화번호는?");
+        const result = userNum.substring(0, userNum.length -4) + "****"; // 첫 번째 인덱스부터 두번째 인덱스 이전까지
+        document.write(result);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/joinas.css">
+    <style>
+        *{box-sizing: border-box;}
+    textarea {
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+    }
+    input:focus {
+    background-color: lightblue;
+    }
+    textarea{
+        background-color: cadetblue;
+        color: white;
+    }
+    textarea:focus{
+        background-color: darkgrey;
+    }
+    textarea:hover{
+        border: 2px dotted red;
+    }
+    input[type=text], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="text-center">회원가입</h1>
+    <div class="container">
+        <form name="register_form" accept="#" id="register_form" method="post">
+            <label for="fId"> 아이디: </label>
+            <input type="text" id="fId" name="fId"  placeholder="아이디">
+            <button>중복확인</button><br>
+        
+            <form name="register_form" accept="#" id="register_form" method="post">
+                <label for="fPass">비밀번호: </label>
+                <input type="text" id="fpass" name="fPass" placeholder="비밀번호" style="width: 200;">
+                <button style="width: 100px;">비밀번호 확인</button><br>
+                
+            <form name="register_form" accept="#" id="register_form" method="post">
+                <label for="fName">  이름: </label>
+                <input type="text" id="fName" name="fName" placeholder="홍길동" style="width: 200;"><br>
+            
+            <form name="register_form" accept="#" id="register_form" method="post">
+                <label for="fEmail"> 이메일: </label>
+                <input type="email" id="fEmail" name="fEmail" placeholder="example@google.com" style="width: 200;"><br>
+
+            <form name="register_form" accept="#" id="register_form" method="post">
+                <label for="gender">  성별: </label>
+                <label><input type="radio" name="gender" value="남자" required> 남자</label>
+                <label><input type="radio" name="gender" value="여자" checked> 여자</label><br>
+            
+            <form name="register_form" accept="#" id="register_form" method="post">
+                <label>전화번호: </label>
+                    <select name="tel1" class="tel">
+                        <option value="010"selected>010</option>
+                        <option value="02">02</option>
+                        <option value="031">031</option>
+                        <option value="033">033</option>
+                        <option value="051">051</option>
+                    </select>
+                    -
+                    <input type="text" name="tel2" class="tel">
+                    -
+                    <input type="text" name="tel3" class="tel">
+                    </form><br>
+
+            <form name="register_form" accept="#" id="register_form" method="post">
+                <label for="call">  주소: </label>
+                <input type="text" id="adress" name="adress" placeholder="경기도 김포시 풍무동" style="width: 200;"><br>
+
+            <form name="register_form" accept="#" id="register_form" method="post">
+                <label for="job">  직업: </label>
+                    <select id="job" name="job">
+                        <option value="백수">백수</option>
+                        <option value="ceo">사장</option>
+                        <option value="president">대통령</option>
+                        <option value="president">갓물주</option>
+                    </select><br>
+
+            <form name="register_form" accept="#" id="register_form" method="post">
+                <label for="hobby">취미: </label>
+                <label>운동<input type="checkbox" name="sports" value="sports" required></label>
+                <label>독서<input type="checkbox" name="reading" value="reading" checked></label>
+                <label>음악감상<input type="checkbox" name="study" value="study"></label>
+                <label>영화보기<input type="checkbox" name="study" value="study"></label>
+                <label>공부 <input type="checkbox" name="study" value="study"></label>
+                
+            <p><strong>하실말씀:</strong></p>
+            <form>
+                <textarea></textarea>
+                    <input type="submit" value="제출">
+                    <input type="reset" value="초기화">
+            </form>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+            <!-- 아이디 중복확인
+            비밀번호
+            비밀번호 확인
+            이름
+            이메일
+            성별
+            전화번호
+            주소
+            직업
+            취미
+            하실말씀 -->
+        
+    
+</body>
+</html>

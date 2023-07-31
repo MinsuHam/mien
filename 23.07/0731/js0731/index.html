@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>배열 문제</title>
+    </head>
+    <body>
+        <!-- 문제1. 배열객체와 수학객체를 이용하여 다음 코드를 완성하라. 점심 시간에 돈가스, 된장국, 김치찌개, 회덮밥, 컵라면, 피자 중 어떤
+                    메뉴를 선택할지 고민이다. 그냥 자동으로 선택하도록 하자. -->
+        <script>
+            const arr = ["돈가스", "된장국", "김치찌개", "회덮밥", "컵라면", "피자"]; const ran =
+            Math.ceil(Math.random(arr) * 6 -1); document.write(arr[ran]); 
+        </script>
+
+            <!-- 문제2. 임의의 파일명(확장자 포함)을 입력받은 후 확장자 명만 추출하는 코드를 작성하라. -->
+        <!-- <script>
+            const platform = prompt("파일명.확장자 입력하세요", ".html");
+            let t = platform.substr(platform.indexOf("."), 10000000);
+                document.write(t);
+        </script> -->
+    </body>
+</html>
