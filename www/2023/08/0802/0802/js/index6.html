@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .container {
+            width: 1200px;
+            height: 800px;
+            background-color: #ddd;
+            margin: 0 auto;
+            
+        }
+        .popup {
+            width: 300px;
+            height: 220px;
+            background-color: #d86d6d;
+            border: 1px solid #999;
+            font-size: 50px;        
+            text-align: center;
+            line-height: 200px;
+            position: fixed;
+            top: calc(50% - 380px);
+            left: calc(50% - 150px);
+            display: none;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #a6c4e6;
+            border: 1px solid #999;
+            font-size: 20px;        
+            text-align: center;
+            line-height: 150px;
+            position: fixed;
+            top: calc(50% - 100px);
+            left: calc(50% - 80px);
+            
+        }
+
+    </style>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // $("선택자").이벤트(함수실행)
+            $("#show").click(function() {
+                $(".popup").slideDown(1000); //1s
+            });
+
+            $("#close").click(function() {
+                $(".popup").slideUp(500);
+            });
+
+            $("#toggle").click(function() {
+                $(".popup").toggle();
+            });
+
+            $("#slideToggle").click(function() {
+                $(".popup").slideToggle();
+            });
+
+            $("#fadeToggle").click(function() {
+                $(".popup").fadeToggle();
+            });
+
+            $("#fadeTo").click(function() {
+                $(".popup").fadeTo("slow", 0.5);
+            });
+
+            $("#anim").click(function() {
+                $(".popup").animate({
+                    left: '250px',
+                    top: '250px',
+                    width: '100px',
+                    height: '100px'
+                    }, 500);
+                });
+                
+            $("#plus").click(function() {
+                $(".box").animate({
+                    // top: calc(50% - 100px);
+                    // left: calc(50% - 80px);
+                        height: '+=50px',
+                        width: '+=50px'
+                    }, 500);
+                });
+                
+
+
+
+
+            });
+            // Jquery
+    
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="popup">
+            팝업
+        </div>
+        <div class="box">
+            100X100
+        </div>
+        <button class="button" id="show">팝업보임</button>
+        <button class="button" id="close">팝업숨김</button>
+        <button class="button" id="toggle">팝업자동</button>
+        <button class="button" id="slideToggle">팝업슬라이드자동</button>
+        <button class="button" id="fadeToggle">페이드자동</button>
+        <button class="button" id="fadeTo">페이드To</button>
+        <button class="button" id="anim">움직이기</button>
+        <button class="button" id="plus">확대</button>
+    </div>
+    
+</body>
+</html>

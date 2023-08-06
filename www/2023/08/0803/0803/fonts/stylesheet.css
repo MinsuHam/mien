@@ -1,0 +1,13 @@
+@font-face {
+    font-family: '';
+    src: url('NotoSansKR-Black-Alphabetic.eot');
+    src: url('NotoSansKR-Black-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('NotoSansKR-Black-Alphabetic.woff2') format('woff2'),
+        url('NotoSansKR-Black-Alphabetic.woff') format('woff'),
+        url('NotoSansKR-Black-Alphabetic.ttf') format('truetype'),
+        url('NotoSansKR-Black-Alphabetic.svg#NotoSansKR-Black-Alphabetic') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

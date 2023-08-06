@@ -1,0 +1,144 @@
+JavaScript = 인터프리터 언어
+JAVA = 콤파일러 언어
+
+마우스 이벤트
+click - 요소에 마우스를 클릭했을 때
+dblclick - 요소에 마우스를 더블 클릭 했을 때
+mouseover - 요소에 마우스를 오버 했을 때
+mouseout - 요소에 마우스를 아웃 했을 때
+mousedown - mouseup
+mousemove - 마우스를 움직일 때
+conextmenu - 마우스 오른쪽 버튼을 누를 때
+
+키 이벤트
+keydown - 키를 눌렀을 때
+keyup - 키를 떼었을 때
+keypress - 키를 누른 상태에서 
+
+폼 이벤트
+focus - 요소에 포커스가 이동 되었을 때
+blur - 요소에서 포커스가 벗어날 때
+change - 요소에서 값이 변경되었을 때
+submit - 폼 값이 전송될 때
+reset
+
+기타 이벤트
+load - 페이지의 로딩이 있을 때
+unload - 페이지가 다른 곳을 이동될 때
+abort - 로딩이 중단 되었을 때
+resize - 요소의 사이즈가 변경되었을 때
+scroll - 스크롤 바가 움직였을 때
+
+인라인 방식
+<요소명 on이벤트명 = 자바스크립트코드></요소명>
+
+고전 방식
+<요소명 id = 아이디></요소명>
+let 변수 = document.getElementById("아이디");
+변수.onclick = function(){ 자바스크립트 }
+
+<요소명 id = 아이디></요소명>
+let 변수 = document.getElementById("아이디");
+변수.addEventListener("click",function(){ 자바스크립트 });
+
+id 값을 이용: document.getElementById("아이디");
+태그 이름 이용: document.getElementsByTagName("이름");
+class 값을 이용: document.getElementsByClassName("클래스");
+
+특정 요소를 지정해서 이용: querySelector, querySelectorAll
+
+ for(let elem of qselect) {
+            alert(elem.innerHTML);
+        }
+
+
+jQuery
+<script src="http://code.jquery.com/jquery.min.js"></script>
+
+$(document).ready(function(){
+ 자바스크립트 코드
+
+});
+
+hide() == display.none 
+show() == display.block
+toggle()
+fadeIn() fadeOut() fadeToggle() fadeTo()
+slideDown() slideUp() slideToggle()
+
+width 100 height 100 바탕 파랑 박스를 만든 후
+버튼을 클릭할 때 마다 width, height가 50씩 커지도록 해보시오.
+
+요소가 갖고 있는 성질
+display: 
+	block, inline, none, 
+	inline-block, flex, 
+
+요소의 위치 상태를 지정하는 옵션
+position: 
+	static(기본값) - 자체적인 위치 값은 없다.(top, left적용 X -> margin,padding 적용 O)
+	absolute - top, left 위치 값은 갖는다. 다른 상대적인 박스는 무시한다.
+		z-index.로 앞뒤 조절 가능
+	relative - margin값 사용가능, top, left 값도 사용가능(static + absolute)
+	fixed - viewport에 고정된 top, left값
+
+margin -- 바깥쪽 여백	
+margin-top margin-left margin-right margin-bottom ==>
+margin: 30px; top 30 right 30 bottom 30 left 30
+margin: 30px 20px => top 30 right 20 bottom 30 left 20
+margin: 30px 20px 10px => top 30 right 20 bottom 10 left 20
+margin: 30px 20px 10px 0 => top 30 right 20 bottom 10 left 0
+
+padding -- 안쪽 여백
+margin-top margin-left margin-right margin-bottom ==>
+
+padding: 30px top 30 right 30 bottom 30 left 30
+padding: 30px 20px => top 30 right 20 bottom 30 left 20
+padding: 30px 20px 10px => top 30 right 20 bottom 10 left 20
+padding: 30px 20px 10px 0 => top 30 right 20 bottom 10 left 0
+
+외곽선
+border-width, border-style, border-color ==> border: 1px solid #333;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

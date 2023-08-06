@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계</title>
+</head>
+<body>
+    <h1 id="mytime"></h1>
+
+    <script>
+        
+        setInterval(nowTime, 1000);   // 1000 = 1s
+
+        function nowTime(){
+
+        const d = new Date();
+        let y = d.getFullYear();
+        let m = d.getMonth();
+        let dd = d.getDate();
+        let h = d.getHours();
+        let mm = d.getMinutes();
+        let s = d.getSeconds();
+        let rs = y + "년 " + (m+1) + "월 " + dd + "일 " + h + "시 ";
+        rs += mm + "분 " + s + "초 ";
+        
+        document.getElementById("mytime").innerHTML = "지금은 " + rs + "입니다.";
+    }
+
+    </script>
+    
+</body>
+</html>

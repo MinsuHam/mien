@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 객체</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <span onclick="view();">누르시오1</span>
+    <div id="mydiv">누르시오2</div>
+    <script>
+        const mydiv = document.getElementById("mydiv");
+        mydiv.addEventListener('click', function(){
+            alert("눌렀땅꼐");
+            
+        });
+        
+            
+        function view(){
+            alert("눌렸습니다.");
+        }
+    </script>
+</body>
+</html>

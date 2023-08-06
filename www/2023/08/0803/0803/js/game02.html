@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game01</title>
+    <style>
+        h1{
+            text-align:center;
+            margin-bottom:50px;
+            
+        }
+
+
+    </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+        let result = 0;  //예상정답
+        let correctNumber = 0;  //컴퓨터가 생각한 숫자
+        let tryNumber = 0; //시도한 횟수
+
+        $(document).ready(function(){
+            //컴퓨터가 생각한 숫자 (랜덤으로 1 ~ 100 사이의 수)
+            correctNumber = Math.floor(Math.random()*100) + 1;
+            $("#correct").val(correctNumber);
+        });
+        //jquery
+
+        //버튼을 클릭하면 tryU() 함수가 실행
+        function tryU(){
+            tryNumber++; //함수가 실행될 떄 마다 값이 1씩 증가
+            let hint = "";
+
+            $('#try').val(tryNumber); //input id = try에 시도 횟수를 등록   
+            let user = parseInt($("#user").val()); //유저가 입력한 값을 받아옴
+            if(correctNumber == user) result= user + "는 정답입니다.";
+            else if(user < correctNumber ) hint = "숫자를 높이세요.";
+            else hint = "숫자를 더 낮춰 주세요.";
+            $('#hint').val(hint);
+            $('#correct').val(result);
+            
+        }
+
+    </script>
+</head>
+<body>
+    <h1>컴퓨터가 생각한 글자를 알아맞춰 보세요.</h1>
+    <ul>
+        <li><label>입력한 숫자</label>
+            <input type="text" id="user">
+            <button type="button" class="btn" onclick="tryU()">확인</button>
+        </li>
+        <li><label>시 도 횟 수</label>
+            <input type="text" id="try" readonly>
+        </li>
+    </ul>
+
+    <div>
+        <label>힌트</label>
+        <input type="text" id="hint" />
+        <input type="text" id="correct" />
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Advanced</title>
+        <style>
+            body{
+                font-size: 18px;
+            }
+            .container{
+                width: 1200px;
+                margin: 30px auto;
+                padding: 30px;
+                box-sizing: border-box;
+                border: 1px solid #333;
+                column-count: 3;
+                column-gap: 60px;
+                column-rule: 7px dashed green;
+
+                /* column-rule-style: solid;
+                column-rule-width: 10px;
+                column-rule-color: green; */
+            }
+            h1 {
+                column-span: all;
+                text-align: center;
+                
+            }
+            @media print{
+                .container {
+                    width: 90%;
+                    border: none;
+                }
+                img {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <p>희망의 무한한 내려온 가치를 행복스럽고 청춘은 끓는 어디 석가는 힘있다. 같이 풀밭에 오직 아름다우냐? sdfsfdsfdsdfsdfsdfsdfsdfsdf
+            <h1>인생의 심장은 이상의 봄바람이다.</h1>
+            희망의 무한한 내려온 가치를 행복스럽고 청춘은 끓는 어디 석가는 힘있다. 같이 풀밭에 오직 아름다우냐?sdfsdfsdfsdfsdfsdfsdfsdf
+            희망의 무한한 내려온 가치를 행복스럽고 청춘은 끓는 어디 석가는 힘있다. 같이 풀밭에 오직 아름다우냐?sdfsdfsdfsdfsdfsdfsdfsdf
+        </p>
+        
+        <p>긴지라 보이는 보이는 봄바람이다.무엇을 열락의 열매를 이것이야말로 부패뿐이다. 날카로우나 같이, 보이는dfdsfagasdgsgsgsg
+            희망의 무한한 내려온 가치를 행복스럽고 청춘은 끓는 어디 석가는 힘있다. 같이 풀밭에 오직 아름다우냐?sdfsdfsdfsdfdsfdsfs
+            희망의 무한한 내려온 가치를 행복스럽고 청춘은 끓는 어디 석가는 힘있다. 같이 풀밭에 오직 아름다우냐?sdfsdfsdfsdfdsfsdfsdfsdfsdfsdf </p>
+
+        <p> 봄바람을 끓는다. 가지에 가장 이상의 보이는 천자만홍이 사라지지 것이다.피부가 시들어 어디 꾸며 할지니sdfsdfsdfsdfsdfsdfsfsdfsdf
+            희망의 무한한 내려온 가치를 행복스럽고 청춘은 끓는 어디 석가는 힘있다. 같이 풀밭에 오직 아름다우냐?sdfsdsdfsdfsdfsdfsdfsdfsdf
+            희망의 무한한 내려온 가치를 행복스럽고 청춘은 끓는 어디 석가는 힘있다. 같이 풀밭에 오직 아름다우냐?sdfsdfsdfdsfsdfdsfsdfsdfsdfsdf </p>
+        </div>
+        <img class="a" src="../../0801/images/001.jpg" alt="001" />
+        <img class="a" src="../../0801/images/002.jpg" alt="002" />
+        <img class="b" src="../../0801/images/003.jpg" alt="003" />
+
+    </body>
+</html>

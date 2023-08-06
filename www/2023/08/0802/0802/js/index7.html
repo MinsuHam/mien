@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 600px;
+            border: 1px solid #333;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        .container > div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .box1 {
+            top: 40px;
+            left: 40px;
+            background-color: pink;
+        }
+        .box2 {
+            top: 80px;
+            left: 80px;
+            background-color: blueviolet;
+            
+        }
+        .box3 {
+            top: 120px;
+            left: 120px;
+            background-color: greenyellow;   
+        }
+        .fixed{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+        }
+        .sticky {
+            height: 50px;
+            background: green;
+            color: #fff;
+            position: -wepkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="container"></div>
+    <div class="sticky">여기가 sticky</div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="fixed">여기</div>
+</body>
+</html>
