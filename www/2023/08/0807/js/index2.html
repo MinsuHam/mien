@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../../jquery/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            $('.prepend').click(function(){
+                $('ol').prepend("<li>요소 안의 앞</li>");
+            });
+            $('.append').click(function(){
+                $('ol').append("<li>요소 안의 뒤</li>");
+            });
+            $('.after').click(function(){
+                $('ol').after("<li>요소 바깥의 뒤</li>");
+            });
+            $('.before').click(function(){
+                $('ol').before("<li>요소 바깥의 앞</li>");
+            });
+
+            $("<li>추가되었습니다.</li>").appendTo('ol');
+            
+            $('li:first-child').empty();
+
+        });//jQuery
+    </script>
+</head>
+<body>
+    <ol>
+        <li>김 철수</li>
+        <li>홍길동</li>
+        <li>이 순이</li>
+    </ol>
+    <button class="prepend">prepend</button>
+    <button class="append">append</button>
+    <button class="after">after</button>
+    <button class="before">before</button>
+
+</body>
+</html>

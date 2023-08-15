@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            $("form").submit(function(e){
+                e.preventDefault();
+
+                const data = $('form').serializeArray();
+                const json_data = JSON.stringify(data);
+
+                console.log(json_data);
+                
+                // const data = new FormData(e.target);
+                // const uid = data.get("name");
+                // const pass = data.get("pass");
+                // console.log(uid, pass);
+            });
+        });
+    </script>
+</head>
+<body>
+    <form action="form2.html" id="form" method="post">
+        <input type="text" id="name" placeholder="아이디">
+        <input type="password" id="password" name="pass" placeholder="비밀번호">
+        <input type="submit"/>
+    </form>
+</body>
+</html>

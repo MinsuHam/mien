@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //10.   세 개의 정수를 받아 세 수가 모두 양의 정수이며 마지막 숫자가 같다면 true를 출력하는 프로그램을 작성하라.
+        //1. 세 수가 모두 양의 정수인가?
+        function xyz(x, y, z){
+        if(x > 0 && y > 0 && z > 0) {
+            return (x % 10 == y % 10) && (y % 10 == z % 10) && (z % 10 == z % 10);
+        }else {
+            return false;
+        }
+    }
+    console.log(xyz(12,12,12));
+
+    </script>
+</body>
+</html>

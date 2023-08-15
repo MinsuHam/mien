@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container * {
+            display: block;
+            border: 2px solid #ddd;
+            color: #000;
+            padding: 8px;
+            margin: 15px;
+        }
+
+
+
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+
+    <script>
+        $(function() {
+            $("div").not(".box").css({
+                backgroundColor: "red",
+                color: "#333"
+            });
+            });
+    </script>
+</head>
+<body>
+    
+
+        <div>
+            <h3>첫 번째 제목입니다.</h3>
+            <p>첫 번째 내용입니다.</p>
+        </div>
+
+        <div class="box">
+            <h3>두 번째 제목입니다.</h3>
+            <p>두 번째 내용입니다.</p>
+        </div>
+
+        <div>
+            <h3>셋 번째 제목입니다.</h3>
+            <p>셋 번째 내용입니다.</p>
+        </div>
+
+        <div class="box">
+            <h3>네 번째 제목입니다.</h3>
+            <p>네 번째 내용입니다.</p>
+        </div>
+    
+    </div>
+</body>
+</html>

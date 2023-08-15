@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //4.   두 정수의 값이 50에서 99이하의 범위에 있는지 확인하는 프로그램을 작성하라.
+        function check_numbers(x, y) {
+
+        if((x >= 50 && x <= 99) || (y >= 50 && y <= 99)) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+    console.log(check_numbers(12, 101));
+    console.log(check_numbers(52, 80));
+    console.log(check_numbers(15, 99));
+
+        // let user = parseInt(prompt("숫자를 입력하세요", "0"));
+        // let user2 = parseInt(prompt("숫자를 입력하세요", "0"));
+
+        // if(user >= 50 && user <= 99){
+        //     document.write("50~99범위에 있네요" + "<br>");
+        // }
+        // else {
+        //     document.write("50~99범위에 없네요" + "<br>");
+        // }
+        
+        // if(user2 >= 50 && user2 <= 99){
+        //     document.write("50~99범위에 있네요" + "<br>");
+        // }
+        // else {
+        //     document.write("50~99범위에 없네요" + "<br>");
+        // }
+
+    </script>
+</body>
+</html>

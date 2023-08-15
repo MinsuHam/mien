@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 생명 주기</title>
+</head>
+<body>
+    <script>
+        function localTest() {
+            var value = "신은혁";
+            document.write("1.value = " + value);
+        }
+
+        localTest();
+        //value값은 지역변수로 선언되어 있어서 함수가 종료되면서 사라짐
+        document.write("2. value = " + value);
+    </script>
+    
+</body>
+</html>

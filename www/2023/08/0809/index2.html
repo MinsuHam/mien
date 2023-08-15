@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container * {
+            display: block;
+            border: 2px solid #ddd;
+            color: #000;
+            padding: 8px;
+            margin: 15px;
+        }
+
+
+
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+
+    <script>
+        $(function() {
+            $("h2").nextUntil("div").css({    //Object 태그 이용
+                color:"red",
+                borderColor: "red"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">parent div
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h4>h4</h4>
+        <p>p</p>
+        <div>div</div>
+        <h1>h1</h1>
+    </div>
+</body>
+</html>

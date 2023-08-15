@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <style>
+        .slide {
+            width: 1000px;
+            height: 500px;
+            border: 1px solid #333;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden; 
+        }
+        .slidein {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3000px;
+            height: 500px;
+            
+            
+        }
+        .slidein > div {
+            width: 1000px;
+            height: 500px;
+            float: left;
+            
+        }
+        .slidein > div.fst {
+            background: burlywood;
+        }
+        .slidein > div.sed {
+            background: forestgreen;
+        }
+        .slidein > div.thir {
+            background: red;
+        }
+    </style>
+
+    <script src="../../../jquery/jquery-1.12.3.js"></script>
+    <script>
+            $(function(){
+                setInterval(autoSlide, 1000);
+            });
+
+        function autoSlide(){
+            $(".slidein").animate({
+                left: '-1000px'
+            }, 1000, function(){
+                $('.slidein>div:first-child()').clone().appendTo(".slidein");
+                $('.slidein>div:first-child()').remove();
+                $(".slidein").css("left", "0");
+            });    
+    }
+    //jQuery
+
+
+        // var currentIndex = 0;
+        // var nextIndex = currentIndex + 1;
+            
+        //     $(function(){
+        //         const clone1 = $(".slidein>div:first-child").clone();
+        //         // $(".slidein>div:nth-child("+nextIndex+")").append();
+                
+        //         $(".slidein>div:nth-child("+nextIndex+")").append();
+        //         currentIndex = nextIndex;
+    </script>
+</head>
+<body>
+    <div class="slide">
+        <div class="slidein">
+            <div class="fst"></div>
+            <div class="sed"></div>
+            <div class="thir"></div>
+        </div>
+    </div>
+</body>
+</html>
