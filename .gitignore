@@ -1,6 +1,8 @@
 *.jpg
 .jpg
 *images
+*img
+img
 images
 image
 *.ppt
