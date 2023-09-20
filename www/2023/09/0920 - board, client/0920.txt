@@ -1,0 +1,20 @@
+HamMien
+MinsuHam
+
+1. 내 컴퓨터 git 프로젝트에서 작업 (master or main)
+git init
+git add .
+git commit -m "첫 번째 커밋"
+
+2. 원격저장소 연결
+git remote add origin 원격저장소 주소(https://github.com/HamMien/recipe_project.git)
+git push -u origin main(or master)
+
+-------------------------------------
+
+dotenv
+nunjucks
+cookie-parser
+express-session
+path
+routes

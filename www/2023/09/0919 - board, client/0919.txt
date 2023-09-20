@@ -1,0 +1,9 @@
+1. react => useeffect
+2. nodeJS ->게시판 --> 목록보기, 글쓰기, 수정하기, 삭제하기
+
+
+project
+- recipe (이미지)
+- client -> react
+  server -> node
+  db -> mtsql, mongodb

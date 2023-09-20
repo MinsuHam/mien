@@ -1,4 +1,11 @@
 *.jpg
+.jpg
 *images
+images
+image
+*.ppt
+*.pptx
+node_modules
+*node_modules
 *.png
 *.pdf

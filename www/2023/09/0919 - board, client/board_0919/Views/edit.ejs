@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업데이트 폼</title>
+</head>
+<body>
+    <h1>업데이트 폼</h1>
+    <form action="/update/<%= new_table[0].id %>" method="post">
+        writer <input type="text" name="writer" value="<%= new_table[0].writer %>"><br>
+        title <input type="text" name="writer" value="<%= new_table[0].title %>"><br>
+        content <input type="text" name="writer" value="<%= new_table[0].content %>"><br>
+        wdate <input type="text" name="writer" value="<%= new_table[0].wdate %>"><br>
+        <button type="submit">업데이트</button>
+    </form>
+</body>
+</html>
