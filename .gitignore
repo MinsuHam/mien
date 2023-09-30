@@ -1,0 +1,16 @@
+*.jpg
+.jpg
+*images
+*img
+img
+images
+image
+*.ppt
+*.pptx
+node_modules
+*node_modules
+*.png
+*.pdf
+*.fig
+fig
+*fig

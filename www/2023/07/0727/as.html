@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const mydate = new Date();
+        document.write("<h1>현재 날짜 정보</h1>");
+        let nowday;
+        let yoil;
+        switch(mydate.getDay()){
+            case 0:
+                yoil = "일";
+            break;
+            case 1:
+                yoil = "월";
+            break;
+            case 2:
+                yoil = "화";
+            break;
+            case 3:
+                yoil = "수";
+            break;
+            case 4:
+                yoil = "목";
+            break;
+            case 5:
+                yoil = "금";
+            break;
+            case 6:
+                yoil = "토";
+            break;
+        }
+        
+//199907
+const gunwooBirth = new Date(1999,6,29);
+let theDay;
+switch(gunwooBirth.getDay()){
+            case 0:
+            theDay = "일";
+            break;
+            case 1:
+            theDay = "월";
+            break;
+            case 2:
+            theDay = "화";
+            break;
+            case 3:
+            theDay = "수";
+            break;
+            case 4:
+            theDay = "목";
+            break;
+            case 5:
+            theDay = "금";
+            break;
+            case 6:
+            theDay = "토";
+            break;
+        }
+//1970. 1. 1
+        const lastDate = new Date(2023,11,20);
+        const diffDate = lastDate.getTime() - mydate.getTime();
+        const dateDiff =  Math.ceil(diffDate/(60*1000*60*24))
+        document.write("수료까지" + dateDiff+"일 남음" , "<br>");     
+
+        nowday = mydate.getFullYear() + "년 " + (mydate.getMonth()+1) + "월 ";
+        nowday += mydate.getDate() + "일 " + mydate.getHours()+"시 ";
+        nowday += mydate.getMinutes()+"분 " + mydate.getSeconds()+"초";
+
+        document.write("지금은" + nowday + " "+ yoil + "요일 입니다.", "<br>");
+        document.write("우리의 친구 김건우의 생일 1999년 7월 29일은 " + theDay + "요일 입니다.");
+   
+    </script>
+</body>
+</html>        

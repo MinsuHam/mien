@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 반응형 정사각형을 만드는 방법 */
+
+        html, body{
+            height:100%;
+        }
+        .box{
+            position:relative;
+            width:50%;
+            background-color:skyblue;
+        }
+        .box::after{
+            display:block;
+            content:"";
+            padding-bottom:100%;
+        }
+        img{
+             position:absolute;
+             top:0;
+             left:0;
+             width:100%;
+             height:100%;
+             object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="images/001.jpg" alt="001"/>
+    </div>
+</body>
+</html>

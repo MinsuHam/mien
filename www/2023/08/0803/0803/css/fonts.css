@@ -1,0 +1,32 @@
+@font-face {
+    font-family: '';
+    src: url('../fonts/NotoSansKR-Black-Alphabetic.eot');
+    src: url('../fonts/NotoSansKR-Black-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSansKR-Black-Alphabetic.woff2') format('woff2'),
+        url('../fonts/NotoSansKR-Black-Alphabetic.woff') format('woff'),
+        url('../fonts/NotoSansKR-Black-Alphabetic.ttf') format('truetype'),
+        url('../fonts/NotoSansKR-Black-Alphabetic.svg#NotoSansKR-Black-Alphabetic') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    color: #333;
+    font-size: 1.5em;
+    font-family: 'notosans';
+}
+
+
+.box > p {
+    display: block;
+    border: 1px solid #333;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    line-height: 50px;
+    text-shadow: 3px 3px 5px red;
+    /* word-wrap: break-word; */
+    word-break: break-all;
+    
+}

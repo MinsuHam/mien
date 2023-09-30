@@ -1,0 +1,13 @@
+1. npm init
+
+2. (필요한 설치 파일)
+	npm install -s express
+	npm install -D nodemon
+
+3. package.json 파일 수정
+  scripts: { "start" : "nodemon"}
+
+4. 기타 설치 파일 (npm install -s 설치파일이름)
+
+fruit = 'apple'
+사과인지 바나나인지 키위인지 오렌지인지 조사

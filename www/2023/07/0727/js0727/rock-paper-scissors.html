@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width:150px;
+            vertical-align: middle;
+            margin-right:40px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<h1>컴퓨터와 대결!!! 가위, 바위, 보</h1>");
+        var game = prompt("가위, 바위, 보 중 하나를 선택 하세요.", "가위");
+        var gameNum;
+        switch(game){
+            case "가위": gameNum = 1; break;
+            case "바위": gameNum = 2; break;
+            case "보": gameNum = 3; break;
+            default: alert("잘못 작성했습니다. 이러기야?"); location.reload();
+        }
+        //Math.ceil 소수 첫째 자리에서 무조건 올림(정수)
+        var com = Math.ceil(Math.random()*3);
+        document.write("나 : <img src='../images/" + gameNum + ".jpg'>");
+        document.write("컴퓨터 : <img src='../images/" + com + ".jpg'>");
+
+
+
+        
+    </script>
+</body>
+</html>

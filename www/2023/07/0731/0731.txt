@@ -1,0 +1,118 @@
+	charAt(index) - 문자열에서 해당 index 번호의 문자를 반환한다.
+indexOf("찾을문자") - 일치하는 문자를 찾는다.(첫 번째 문자만 찾아 인덱스 번호 반환)
+			 문자가 없으면 -1을 반환
+lastIndexOf("찾을문자") - 일치하는 문자를 오른쪽부터 찾는다.(오른쪽부터 첫 번째 문자를 찾아 인덱스 번호 반환)
+			 문자가 없으면 -1을 반환
+match("찾을문자") - indexOf와같음. 단, 문자가 없으면 'null'을 반환
+search("찾을문자") -일치하는 문자를 오른쪽부터 찾는다.(오른쪽부터 첫 번째 문자를 찾아 인덱스 번호 반환)
+			 문자가 없으면 -1을 반환
+replace("바꿀문자") - 왼쪽부터 해당 문자 1개만 반환 
+replaceAll("바꿀문자") - 전부반환
+slice(a, b)
+substring(a, b) - 
+substr(a, 문자개수) 
+spilt - 
+toLowerCase() - 소문자로
+toUpperCase() - 대문자로
+length - 길이
+concat("새로운 문자")
+charCodeAt(index) - cf)해당 index를 아스키코드 값으로 반환 / 반환받기 String.fromCharCode(번호)
+trim()
+
+당신의 영문 이름은? prompt로 출력
+ - 답변을 모두대문자로 출력하기
+
+당신의 전화번호는? prompt 출력
+ - 출력문에 전화번호 마지막 네 글자를 ****로 출력하기
+
+window 객체의 종류
+open("URL", "새창 이름", "새창 옵션")
+	- width: 새창의 너비
+	- height: 새창의 높이 
+	- left: x축간격 
+	- top: y축 간격
+	- scrollbals: yes or no
+	- location: yes or no(url 영역 보이거나 숨김)
+	- status(상태창)
+	- toolbars(도구영역)
+alert()
+prompt()
+confirm()
+resizeTo(width, height) -  지정한 새창 크기를 변경
+setinterval(함수, 시간) - 지정된 시간간격으로 함수를 계속해서 호출
+setTimeout(함수, 시간) - 지정된 시간에 단 한번 함수를 호출
+
+screen - width, height, availWidth, availHeight, colorDepth(모니터 표현 가능한 컬러 bit반환)
+location
+	- href: 주소
+	- hash: url(해시값)
+	- hostname: 호스트이름+포트번호
+	- search: 쿼리 요청 값 반환
+	- reload(): 새로고침
+	- protocol: http등 반환
+history
+	- back()
+	- forward()
+	- go(이동숫자)
+	- length
+navigator
+	- userAgent(제일 많이 씀)
+	- 플랫폼
+	- 운영체제
+	- 브라우저 엔진이름
+	- 브라우저이름
+	- 호환 가능한 다른 브라우저
+	- language
+1.
+배열객체와 수학객체를 이용하여 다음 코드를 완성하라.
+점심 시간에 돈가스, 된장국, 김치찌개, 회덮밥, 컵라면, 피자 중 어떤 메뉴를 선택할지 고민이다.
+그냥 자동으로 선택하도록 하자. 
+
+2.
+임의의 파일명(확장자 포함)을 입력받은 후 확장자 명만 추출하는
+코드를 작성하라.
+
+flex
+1. flex-direction: column, row, column-reverse, row-reverse
+2. flex-wrap: wrap, nowrap;
+1+2. = flex-flow: row wrap;
+
+justify-content: flex-start, center, flex-end,  space-around, space-between
+
+align-items: stretch(기본값), flex-start, flex-end, center, baseline
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

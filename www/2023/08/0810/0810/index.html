@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+            max-width: 800px;
+            border: 4px solid #333;
+        }
+        .img-big {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-bottom: 4px solid #333;
+            padding: 0;
+        }
+        .img-big img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+                
+            }
+        .img-small {
+            width: 100%;
+            height: 100px;
+        }
+        .img-small img {
+            height: 100px;
+            cursor: pointer;
+        }
+
+
+
+
+
+    </style>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            $('.img-small img').click(function(){
+                const img = $(this).attr('src');
+                // $('.img-big img').attr("src", img);
+                $('.img-big').html("<img src=" + img + ">");
+                
+            })
+
+        });
+        //jQuery
+    </script>
+
+</head>
+<body>
+    <div class="gallery">
+        <div class="img-big">
+            <img src="images/big.jpg" alt="big">
+        </div>
+        <div class="img-small">
+            <img src="images/1.jpg" alt="1">
+            <img src="images/2.jpg" alt="2">
+            <img src="images/3.jpg" alt="3">
+            <img src="images/4.jpg" alt="4">
+
+        </div>
+    </div>
+</body>
+</html>

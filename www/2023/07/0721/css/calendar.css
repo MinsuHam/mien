@@ -1,0 +1,55 @@
+.title{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 130px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+table{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+thead{
+    height: 70px;
+    border: 2px dotted #fff;
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+}
+caption{
+    width: 500px;
+    height: 500px;
+    margin-left: 80px;
+    caption-side: top;
+    text-align: left;
+    margin-bottom: 5px;
+}
+td{
+    height: 50px;
+    width: 50px;
+    border: 2px dotted #fff;
+    text-align: center;
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+    
+}
+.red{
+    color: red;
+}
+div{
+    width: 800px;
+    height: 600px;
+    border: 1px solid #000;
+    margin-bottom: 50px;
+    padding: 0px 0px 150px 0px;
+    /* background-image: url("../../images/sample.jpg");
+    background-position: center;
+    background-repeat: repeat; */
+}
+tr:nth-child(even){
+    background-color:burlywood;
+    
+}

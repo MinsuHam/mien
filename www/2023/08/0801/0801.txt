@@ -1,0 +1,81 @@
+함수란? 코드의 저장공간, 코드공장
+
+function 함수명(){
+	실행코드
+}
+let 변수 = function(){
+}
+
+let 변수 = ()=>{
+	실행코드
+}
+
+name, area를매개변수로 받아서
+안녕하세요? name 홍당무입니다. 사는 곳은 김포(area)입니다.
+
+setInterval(함수이름, 시간); - 시간 단위를 함수를 실행
+
+var 변수; <== 전역 변수
+let 변수2;
+
+if() {
+  let 지역변수;
+}
+function(e<==매개변수) {
+   var 변수; <== 지역변수
+   let 변수2;
+}
+
+encodeURI() -  문자를 유니코드 값으로 인코딩(영문, 숫자, 일부 기호는 제외:  ; , / ? : @ & = +)
+└> ex) encodeURI("?query=값")
+
+encodeURIComponent() - 문자를 유니코드 값으로 인코딩 기호도 포함
+└> ex) encodeComponent("?query=값")
+
+decodeURI() -유니코드 값을 다시 문자화
+decodeURIComponent()
+
+ParseInt() - 문자열 데이터를 정수형으로
+ParseFloat() - 문자열 데이터를 실수형으로
+Number() - 숫자형 데이터로 반환
+String() - 문자형 데이터로 반환
+Boolean() - 논리형 데이터로 반환
+isNaN() - is Not A Number 문자형이면 true를 반환
+└> ex) let num = "5-3"; / isNaN(num)-> true;
+└> ex) let num2 = "53"; / isNaN(num)-> false;
+
+eval() - 문자형 데이터를 따옴표 없는 js코드로 처리하는 함수
+└> ex) num = "15 + 3"; / eval(num) = 18
+
+문제1. 버튼을 클릭할 때 마다 (#ff0, #6c0, #fcf, #cf0, #39f)의 색상 값 중 1개가 
+	랜덤으로 선택되어 body에 적용되도록 하라.
+	힌트) 1단계 - 버튼 클릭하면 함수 호출
+	       2단계 - Math.random() length 이용
+	       3단계 - document.getElementById("아이디").style.backgroundColor = ???
+
+CSS Media Queries
+all, print, screen, speech
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

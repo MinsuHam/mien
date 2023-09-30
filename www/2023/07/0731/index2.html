@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display: flex</title>
+    <style>
+        .flex-container {
+            background-color: blueviolet;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; /* wrap을 지정하지 않으면 div 박스 크기가 맞지 않게 출력 */
+            /* space-between 많이 쓰임 */
+            justify-content: space-between;
+            margin: auto;
+            width: 800px;
+            height: 600px;
+            margin: auto;
+        }
+        .flex-container > div {
+            width: 100px;
+            /* height: 100px; */
+            text-align: center;
+            background-color: #fff;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+        <!-- float(가로 정렬 또는 세로 정렬 clear 선언이 필요 -->
+        <!-- display: grid; 가로 정렬 동시에 세로 정렬 -->
+        <!-- display: flex; 부모가 갖는 성질 -->
+        
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+</body>
+</html>

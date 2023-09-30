@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Weather App</title>
+    <link rel="stylesheet" href="css/mobile.css">
+    <script src="js/jquery.js"></script>
+    <script src="slick/slick.js"></script>
+    <script src="js/mobile.js"></script>
+</head>
+<body>
+    <header class="bg-white">
+        <h1 class="header-text text-center py-1">Mien's Weather App</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 text-center">
+                    <span class="now-time">2023년 08월 24일</span>
+                </div>
+                <div class="col-4">
+                    <form class="float-right">
+                        <input type="search"
+                                name="searchcity"
+                                class="search"
+                                placeholder="도시명을 입력하세요" />
+                    <button type="button" class="btn-search">
+                        <i class="ri-search-line ri-xl"></i>
+                    </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner py-5" id="banner">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-5 slider">
+                    <h1>My First Weather App</h1>
+                    <p class="description-title">Download This Cool App For Free!</p>
+                    <p class="description-text">Stylish Weather App, Start By Mien's App</p>
+                    <p class="description-text">iterative approaches to 
+                        corporate strategy foster collaborative thinking to further the overall value proposition.
+                    </p>
+                </div>
+
+                <div class="col-7 d-flex justify-content-center align-items-center">
+                    <div class="mobile-phone">
+                        <div class="top d-flex justify-content-between align-items-center">
+                            <i class="ri-menu-line"></i>
+                            <p class="mobile-date">2023년 08월 24일(목)</p>
+                        </div>
+                        <!-- //top -->
+                        <div class="content">
+                            <h1 class="text-center today-city-name">김포시</h1>
+                            <p class="text-center today-city-time">00시</p>
+                            <div class="weatherbox d-flex align-items-center">
+                                <div class="col-6">
+                                    <i class="wi wi-day-sunny"></i>
+                                </div>
+                                <div class="col-6 today-temp">
+                                    25<span>℃</span>
+                                </div>
+                            </div>
+                            <!-- //weatherbox -->
+
+                            <div class="col-12 text-center mt-2 today-temp-arrow">
+                                <i class="ri-arrow-down-line"></i><span class="today-down-temp">30℃</span>
+                                / 
+                                <i class="ri-arrow-up-line"></i><span class="today-up-temp">50℃</span>
+                            </div>
+                            <!-- //today-temp-arrow -->
+
+                            <div class="col-12 next-date temp-box-pr
+                                        d-flex justify-content-center">
+                                <div class="temp-box">
+                                    <div class="next-temp">
+                                        <span>TUE</span>
+                                        <span>25℃</span>
+                                    </div>
+                                    <div class="next-icon">
+                                        <i class="wi wi-day-sunny"></i>
+                                    </div>
+                                </div>   
+                                <!-- //temp-box1-->  
+                                <div class="temp-box">
+                                    <div class="next-temp">
+                                        <span>TUE</span>
+                                        <span>25℃</span>
+                                    </div>
+                                    <div class="next-icon">
+                                        <i class="wi wi-day-sunny"></i>
+                                    </div>
+                                </div>   
+                                <!-- //temp-box2-->
+                                <div class="temp-box">
+                                    <div class="next-temp">
+                                        <span>TUE</span>
+                                        <span>25℃</span>
+                                    </div>
+                                    <div class="next-icon">
+                                        <i class="wi wi-day-sunny"></i>
+                                    </div>
+                                </div>   
+                                <!-- //temp-box3-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //mobile-phone-->
+                </div>
+            </div>
+            <!-- //row -->
+        </div>
+    </section>
+</body>
+</html>
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        font-weight: 900;
+    }
+    p > a {
+        display: inline-block;
+        margin-left: 100px;
+    }
+    table {
+        width: 800px;
+        margin: 30px auto;
+        background-color: #ddd;
+    }
+    table, td, tr, th {
+        border-collapse: collapse;
+        border: 1px solid #333;
+    }
+    th {
+        padding: 10px 10px;
+    }
+</style>
+<body>
+    <h1>폼</h1>
+    <p><a href="/create">사용자 추가</a></p>
+    <table>
+        <thead>
+            <tr class="table-menu">
+                <th>WRITER</th>
+                <th>TITLE</th>
+                <th>CONTENT</th>
+                <th>DATE</th>
+                <th>수정</th>
+                <th>삭제</th>
+            </tr>
+            </thead>
+            <% new_table.forEach(function (value) { %>
+            <tbody>
+                <tr>
+                    <td><%= value.writer %></td>
+                    <td><%= value.title %></td>
+                    <td><%= value.content %></td>
+                    <td><%= value.wdate %></td>
+                    <td><a href="/edit/<%= value.id %>">업데이트</a></td>
+                    <td><a href="/delete/<%= value.id %>">삭제</a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

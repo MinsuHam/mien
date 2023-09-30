@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&display=swap');
+
+*{box-sizing: border-box;}
+
+/* body */
+body {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+/* container */
+.container {
+    width: 800px;
+    margin: 40px auto;
+}
+
+/* accrodian */
+.accrodian {
+    background-color: #ededed;
+    color: #333;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+}
+.accrodian:hover {
+    background: #ccc;
+    transition: all 0.4s;
+}
+/* active */
+.active {
+    background: #ccc;
+    font-weight: 600;
+}
+/* panel */
+.panel {
+    border: 1px solid #ccc;
+    padding: 0 25px;
+    background-color: #fff;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.3s ease-out;   
+}
+.panel p {
+    padding: 25px 5px;
+}

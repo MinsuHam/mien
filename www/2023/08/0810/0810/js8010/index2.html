@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-grid.css">
+    <style>
+      .title{
+        margin:40px 0;
+        text-align:center;
+        text-decoration-line: underline overline;
+        text-decoration-color:brown;
+      }
+      .img{
+         width:100%;
+         position:relative;
+         margin-bottom:30px;
+      }
+      .img::after{
+        content:"";
+        display:block;
+        padding-bottom:100%;
+      }
+      .imgbox{
+        position:absolute;
+        width:100%;
+        height:100%;
+        overflow:hidden;
+        cursor:pointer;
+      }
+      .imgbox img{
+        max-width:100%;
+      }
+
+      .popup{
+         position:fixed;
+         width:100%;
+         height:100%;
+         z-index:100;
+         top:0;
+         left:0;
+         background:rgba(0,0,0,.7);
+         display:none;
+      }
+      .popup-body{
+         width:500px;
+         height:762px;
+         position:absolute;
+         /*
+         top:50%;
+         left:50%;
+         transform: translate(-50%, -50%);  
+         */
+         top: calc(50% - 361px);
+         left: calc(50% - 250px);  
+      }
+      .close{
+        position:absolute;
+        font-size:80px;
+        color:#fff;
+        z-index:101;
+        top:10px;
+        right:30px;
+        cursor:pointer;
+      }
+    </style>
+        <script src="../js/jquery.js"></script>
+        <script>
+            $(function(){
+            $('.close').click(function(){
+                $('.popup').fadeOut(300);
+            });
+            $('.imgbox img').click(function(){
+                const img = $(this).attr("src"); //src 가져온다
+                const imgs = img.split("/");  // / 기준으로 배열로 나눈다.
+                let bimg = imgs[imgs.length-1];  //배열의 크기 -1 로 마지막 원소만 취한다.
+                bimg = "../images/"+bimg;
+                $('.popup-body img').attr('src', bimg);
+                $('.popup').fadeIn(300);
+            });
+            });
+    </script>
+</head>
+<body>
+    <h1 class="title">My Gallery</h1>
+    <div class="container">
+        <div class="row">
+            <!-- loop -->
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/001.jpg" alt="001" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/002.jpg" alt="002" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/003.jpg" alt="003" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/004.jpg" alt="004" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/005.jpg" alt="005" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/006.jpg" alt="006" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/007.jpg" alt="007" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/008.jpg" alt="008" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/009.jpg" alt="009" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/010.jpg" alt="009" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/011.jpg" alt="009" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="img">
+                    <div class="imgbox">
+                        <img src="../images/output/012.jpg" alt="009" />
+                    </div>
+                </div>
+            </div>
+            <!-- /loop -->
+            
+        </div>
+    </div>
+
+    <div class="popup">
+        <span class="close">X</span>
+        <div class="popup-body">
+            <img src="../images/001.jpg" alt="001" />
+        </div>    
+    </div>
+</body>
+</html>

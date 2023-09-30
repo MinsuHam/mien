@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function2</title>
+</head>
+<body id="body">
+    <button onclick="changeColor()">누르시오</button>
+
+    <script>
+        var color = ["#ff0", "#6c0", "#fcf", "#cf0", "#39f"];
+        var i = 0;
+
+        function changeColor() {
+            i++;
+                if(i >= color.length) {
+                    i = 0;
+                }
+            var bodyTag = document.getElementById("body");
+            bodyTag.style.backgroundColor = color[i];
+        }
+        // var count = 0;
+        // myFnc();
+        // function myFnc() {
+        //     count++;
+        //     document.write("Hello" + count, "<br>");
+        // }
+        // myFnc();
+    </script>
+</body>
+</html>

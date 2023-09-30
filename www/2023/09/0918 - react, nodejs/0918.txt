@@ -1,0 +1,20 @@
+react npx create-react-app 프로젝트명
+ - public (정적파일)
+ - src (작업폴더)
+
+const [변수, 바꿀함수명] = useState(초기화값)
+
+const[count, setCount] = useState(1);
+
+useEffect()
+
+-------------------------------------------------
+
+1. nodeJS + mySQL
+
+2. 프로젝트: nodeJS + nunjucks + mysql ==> 게시판 제작
+
+
+
+alter user '아이디'@'localhost IDENTIFIED WITH mysql_native_password BY '비밀번호';
+flush privileges;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="text" name="num1" id="num1" />
+        <input type="text" name="num2" id="num2" />
+        
+        <button type="button" onclick="val(2)">등록</button>
+        
+    </form>
+
+    <script>
+        function val(e) {
+        
+        var num1 = (document.getElementById("num1").value);
+        var num2 = (document.getElementById("num2").value);
+        switch(e) {
+            case 1: num1; break;
+            case 2: num2; break;
+            
+        }
+        alert("안녕하세요?"+ num1 + " 입니다." + "사는 곳은 " + num2 + "입니다,");
+    }
+    </script>
+    
+</body>
+</html>

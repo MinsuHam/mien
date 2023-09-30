@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game01</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        div {
+            height: 3px;
+            width: 3px;
+            background-color: #000;
+        }
+        .start {
+            position: fixed;
+            left: 0;
+            top: 45%;
+        }
+        .stop {
+            position: fixed;
+            right: 0;
+            top: 45%;
+        }
+        
+
+
+    </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.start').click(function(){
+                $('div').animate({
+                    width:'100%'
+                    }, 500);
+    
+            });
+            
+            $('.stop').click(function(){
+
+                $('div').stop();
+            });
+        });
+        
+        //jquery
+    </script>
+</head>
+<body>
+    <h1>최대한 길이를 짧게 정지 시켜 보세요.</h1>
+    <div></div>
+    <button type="button" class="start">시작</button>
+    <button type="button" class="stop">정지</button>
+    
+</body>
+</html>

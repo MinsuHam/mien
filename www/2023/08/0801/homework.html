@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function2</title>
+</head>
+<body id="body">
+    <button onclick="changeColor()">누르시오</button>
+
+    <script>
+        var color = ["#ff0", "#6c0", "#fcf", "#cf0", "#39f"];
+        function changeColor() {
+            const ran = Math.ceil(Math.random(color) * 5 - 1); 
+            var bodyTag = document.getElementById("body");
+            bodyTag.style.backgroundColor = color[ran];
+        }
+    </script>
+</body>
+</html>

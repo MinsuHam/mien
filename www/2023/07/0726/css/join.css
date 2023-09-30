@@ -1,0 +1,29 @@
+*{box-sizing: border-box;}
+.container{
+    width: 800px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #999;
+    padding: 40px;
+    background-color: #fff;
+}
+.text-center{
+    text-align: center;
+}
+h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+body{
+    background: url(../images/background.gif);
+}
+
+.tel{
+    width: 130px;
+}
+select{
+    padding: 5px 5px;
+    font-size: 16px;
+    margin-right: 5px;
+}

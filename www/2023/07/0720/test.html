@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /*
+            background-repeat: no-repeat, repeat-x, repaet-y, repeat(기본값);
+            background-attachment
+            background-position
+
+        */
+        /*
+            border-style: solid, dashed, dotted
+        */
+        .box1{
+            width: 350px;
+            height: 350px;
+            background-color: #ddd;
+            background-image: url(images/img.png);
+            background-repeat: repeat;
+            border-width: 5px;
+            border-style: double;
+            border-top-color: #000;
+            border-right-color: blue;
+            border-left-color: red;
+            border-bottom-color: green;
+            
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 220px;
+            border-bottom-right-radius: 220px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 외부 스타일시트 보다 내부스타일 태그가 우선권을 가진다. -->
+    <div class="box1">
+        <h1 class="bblue">제목입니다.</h1>
+        <p class="btomato">내용입니다.</p>
+    </div>
+    <div class="box2">
+        <h1 class="blue">제목입니다.</h1>
+        <p class="tomato">내용입니다.</p>
+    </div>
+
+</body>
+</html>

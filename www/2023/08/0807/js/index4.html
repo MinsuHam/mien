@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        li {
+            padding: 10px 20px;
+            background: #ccc;
+        }
+        li > a {
+            text-decoration: none;
+            color: #999;
+        }
+        .active {
+            background: #ededed;
+        }
+        .active a {
+            color: #000;
+        }
+        .contain > div {
+            display: none;
+        }
+
+
+    </style>
+
+    <script src="../../../jquery/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            $('li').click(function(){
+                $('li').removeClass("active");
+                $(this).addClass("active");
+                const myId = $(this).find("a").attr("href");
+                $("#nav1, #nav2, #nav3").hide();
+                $(myId).show();
+                
+            });
+
+        });
+        //jQuery
+
+
+    </script>
+</head>
+<body>
+    <ul class="nav">
+        <li class="active"><a href="#nav1">메뉴1</a></li>
+        <li><a href="#nav2">메뉴2</a></li>
+        <li><a href="#nav3">메뉴3</a></li>
+    </ul>
+    <div class="contain">
+        <div id="nav1"><h1>메뉴11</h1></div>
+        <div id="nav2"><h1>메뉴22</h1></div>
+        <div id="nav3"><h1>메뉴33</h1></div>
+    </div>
+</body>
+</html>

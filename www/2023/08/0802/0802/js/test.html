@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop</title>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+
+    <style>
+        .wrap {
+            width: 800px;
+            height: 600px;
+            background-color: #dbd3a4;
+            margin: 0 auto;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+        .login {}
+        .show {
+            width: 800px;
+            height: 600px;
+            background-color: #a3e0ab;
+            border: 1px solid #333;
+            
+            position: absolute;
+            top: 150px;
+            left: 0px;
+            display: none;
+        }
+        form {
+            font-size: 12px;
+        }
+        form ul {}
+        form ul li {}
+
+        li {
+            list-style-type: none;
+        }
+    
+        .btb {
+            display: block;
+            width: 20px;
+            position: absolute;
+            top: 0px;
+            left: 770px;
+            
+            
+        }
+        .btb > span {
+            display: block;
+            height: 3px;
+            background: #000;
+            margin: 8px 0;
+            background-color: #817d7d;
+            
+        }
+        span:first-child {
+            transform: translate(0, 8px); rotate: 45deg;
+        }
+        span:last-child {
+            transform: translate(0, -8px); rotate: -45deg;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        
+
+        <div class="login">
+            <button type="button" id="btn">로그인</button>
+        </div>
+        <div class="show">
+            <div class="userid">
+                <div class="btb">
+                    <span></span>
+                    <span></span>
+                </div>
+            <form name="register" id="register" method="post" >
+                <ul>
+                    <li>
+                        <label class="userid" for="userid">아이디:</label>
+                        <input type="text" name="userid" id="userid" placeholder="아이디" required />
+                        <button type="button" class="btnconfirm">중복확인</button>
+                    </li>
+
+                    <li>
+                        <label class="userpass" for="userpass">비밀번호:</label>
+                        <input type="text" name="userpass" id="userpass" placeholder="비밀번호" required />
+                        <button type="button" class="userpass">비밀번호 확인</button>
+                    </li>
+
+                    <li>
+                        <label class="userName" for="userName">이름:</label>
+                        <input type="text" name="userName" id="userName" placeholder="홍길동" required />
+                        
+                    </li>
+
+                    <li>
+                        <label class="useremail" for="useremail">이메일:</label>
+                        <input type="email" name="useremail" id="useremail" placeholder="example@google.com" required />
+                        
+                    </li>
+
+                    
+                </ul>
+            </form>
+            <!--//form -->
+            </div>
+            <!--//userid -->
+
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $(".show").toggle();
+                
+            });
+        });
+
+
+
+
+
+    </script>
+    <!--//script -->
+
+</body>
+</html>

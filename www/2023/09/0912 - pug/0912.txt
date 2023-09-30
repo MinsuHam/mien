@@ -1,0 +1,22 @@
+request, response 객체 살펴보기
+1. req.app - req를 통해 app  객체에 접근 예) req.app.get('port')
+2. req.body - body-parser 미들웨어의 요청으로 본문을 해석하는 객체
+3. req.cookie - cookie-parser 미들웨어 객체
+4. req.ip - 요청의 ip주소가 담겨있음
+5. req.params - router 매개변수를 받는 객체
+6. req.query - 쿼리 스트링으로 받는 객체
+7. req.singedCookies - 서명된 쿠키는 req.sookie 대신 이곳에 담긴다.
+8. req.get(헤더이름) - 헤더값
+
+1. res.app - res를 통해 객체에 접근
+2. res.cookie(키, 값, 옵션) - 쿠키를 만드는 메서드
+3. res.clearCookie(키, 값, 옵션) - 쿠키 제거
+4. res.end() - 데이터 없이 응답
+5. res.json(JSON) - json 타입으로 응답
+6. res.redirect(주소) - 리다이렉트할 주소와 함께 응답
+7. res.render(뷰, 데이터) -  템플릿 엔진 렌더링(오늘배움)
+8. res.send(데이터) - 데이터와 함께 응답
+9. res.sendFile(경로) - 경로에 위치한 파일을 응답
+10. res.set(헤더, 값) - 응답 헤더 설정
+11. res.status(코드) - 응답 시 http 상태 코드 지정
+예)  res.status(202).cookie('test', 'test').redirect('/login');

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>당신의 지출 내역은</h1>
+    <p id="username"></p>
+    <p id="result"></p>
+    <script>
+        let name = prompt("당신의 이름은?", "홍길동");
+        var a = parseInt(prompt("교통 비용은??", "0000"));
+        var b = parseInt(prompt("음료 비용은??", "0000"));
+        var c = parseInt(prompt("밥 비용은??", "0000"));
+        var normal = a + b + c;
+
+        number1 = a;
+        number2 = b;
+        number3 = c;
+        number4 = normal;
+
+        let result = (number1 + number2 + number3) >= 10000 ? number4-10000+ " 원 초과.":"돈관리를 잘했어요.";
+    
+        document.getElementById("username").innerHTML = "반갑습니다 " + name + " 님. ";
+        document.getElementById("result").innerHTML =  name + "님은 " + result;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //1.   두 개의 정수를 받아 하나는 양수이고 하나는 음수인지를 판별하는 프로그램을 작성하라.
+            function pnum(x, y) {
+                if((x < 0 && y > 0) || (x > 0 && y < 0)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        console.log(pnum(10, 20));
+        console.log(pnum(-10, 10));
+        console.log(pnum(10, -9));
+
+            // let p = parseInt(prompt("첫번째 숫자를 입력하세요", "0"));
+            // let m = parseInt(prompt("두번쨰 숫자를 입력하세요", "0"));
+
+            // if (p > 0) {
+            //     document.write("양수<br>");
+            // } else if (p < 0) {
+            //     document.write("음수<br>");
+            // }
+
+            // if (m > 0) {
+            //     document.write("양수<br>");
+            // } else if (m < 0) {
+            //     document.write("음수<br>");
+            //}
+        </script>
+    </body>
+</html>

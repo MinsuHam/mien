@@ -1,0 +1,61 @@
+/* @import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('weather-icons.min.css');
+@import url('weather-icons-wind.min.css');
+@import url('remixicon.css');
+@import url('../slick/slick.css');
+@import url('../slick/slick-theme.css');
+@import url('../bootstrap/css/bootstrap.min.css');
+
+/* reset */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color:#333;
+    font-size:16px;
+    margin-top:50px;
+}
+a, a:link{
+    text-decoration:none;
+    color:#333;
+}
+a:hover{
+    text-decoration:underline;
+    color:#666;
+}
+
+/** header */
+header {
+    width: 100%;
+    height: 150px;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: #121313;
+    color:#666;
+}
+
+/** banner */
+.banner {
+    height: 700px;
+    background:#121313 url(../images/1.webp) no-repeat;
+    background-size: 100%;
+}
+/** slider */
+.slider h1 {
+    font-size:35px;
+    letter-spacing:1px;
+    font-weight:900;
+    color:#000;
+    margin-bottom:10px;
+}
+.description-title {
+    font-size:25px;
+    font-weight:500;
+    color:#333;
+    line-height:30px;
+}
+.description-text {
+    color:#333;
+    font-weight:300;
+    margin-bottom:30px;
+}

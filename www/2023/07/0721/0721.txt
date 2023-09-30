@@ -1,0 +1,146 @@
+color: #000000; => 글씨의색상
+	black;
+	rgb(0,0,0);
+
+바탕화면의 색상 - background-color:
+바탕화면 이미지 - background-image: url(이미지경로);
+바탕화면 이미지 반복 여부 - background-repeat: repeat; no-repeat; repeat-x; repeat-y;
+     
+                    t       r    b    l
+border-width: 5px 3px 3px 5px;
+                  
+                    5px 3px 3px //top left right bottom
+	      5px 2px // top bottom , left right
+border-color
+border-style
+└>border: 1px solid #ddd
+border-top
+border-right
+border-bottom
+border-left
+border-radius
+
+
+block태그는 width 값과 height값을 가질 수 있다.
+margin  top left right bottom모두 사용할 수 있다.
+
+inline(a span...) 태그는 width, height 값을 가질수없다
+margin은 left, right만 가능하다 
+
+모서리가 꺾인 글씨체 = serif체
+고딕체 모서리가 꺽이지 않은 글씨체 = sans-serif
+타자체 - monospace체라고함
+필기체 - cursive
+꾸밈체 - fantasy
+font-family: 폰트이름1, 폰트이름2(대체 폰트), 폰트이름(대체폰트),
+                sans-serif; 
+font-size: px, em, rem, %(폰트의 크기)
+font-weight: lighter, normal, bold, border, (폰트의 굵기)
+                   300      400     700   800~900
+font-style: normal, italic, oblique;
+font-variant: normal, small-caps;(큰대문자, 작은대문자)
+font: 20px arial, serif bold -> 폰트 축약 버전
+
+
+color: 폰트의 색상
+align: 폰트의 정렬
+	text-align
+(	(블록라인에 설정하면 인라인박스 또는 폰트가 가운데 정렬 된다,
+	단, 블록라인은 가운데 정렬 되지 않는다.
+	블록을 가운데 정렬 하고자 한다면 margin-left: auto margin-right:auto를 이용
+	해야 한다.)
+	(옵션은 left, right, center, justify, inherit)
+	text-align-last
+	direction
+	vertical-align
+
+text-align은 가로정렬
+vertical-align은 세로정렬(단, 인라인 태그 사이에서만 가능)
+text-decoration
+	-text-decoration-line: under-line, over-line, line-through(가운데)
+	-text-decoration-color
+	-text-decoration-style: solid, wavy
+	-text-decoration-thickness
+기억해야 하는 것은 text-decoration: underline 또는 none;
+
+text-trandform (대소문자)
+      text-transform: uppercas, lowercas, capitalize;
+
+text-spacing(글자의 간격)
+ - 글자와 글자 사이의 간격: letter-spacing
+ - 단어와 단어 사이의 간격: word-spacing
+ - 줄과줄 사이의 간격: line-height
+
+white-space(문자의 보여주는 방법을 정해줌)
+ - normal
+ - nowrap: 줄바꿈이 되지 않는다. 페이지를 넘어서도 줄바꿈은 하지 않음
+ - pre: HTML의 pre하고 같다
+ - pre-line: HTML의 pre하고 같지만 띄어쓰기는 한칸만띈다.
+ - pre-wrap: pre처럼 쓰지만 박스가 끝나는부분에서는 줄바꿈을 해준다.
+ - inherit
+
+7월달 달력을 디자인 해 보세요
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

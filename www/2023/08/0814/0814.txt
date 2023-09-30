@@ -1,0 +1,21 @@
+1. 비동기 통신
+2. xml -> json
+- ajax => json
+4. 날씨데이터 전송받아서 웹페이지 => 
+5. 모바일웹앱(cordova)
+
+new FormData() 
+serialize()
+serializeArray()
+
+-------------------------------------------------
+Mysql
+일부만 조회 limit ==> 오라클 ROWNUM SQL SERVER => top
+
+select * from table where 조건 limit 10, 20
+
+집합함수
+count(*)
+avg()
+sum(), min(), max(), length(), mid(컬럼명 또는 문자열, 1, 3), round() ...
+
