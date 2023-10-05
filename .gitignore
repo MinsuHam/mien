@@ -14,3 +14,7 @@ node_modules
 *.fig
 fig
 *fig
+font
+*font
+.font
+*.font
