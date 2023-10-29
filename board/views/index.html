@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h1 class="text-center mb-5">{{title}}</h1>
+<div class="row justify-content-center">
+    <table class="bbslist table-hover">
+        <colgroup>
+          <col width="10%">
+          <col>
+          <col width="15%">
+          <col width="15%"> 
+          <col width="10%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>날짜</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tobody>
+            {% for rs in row %}
+            <tr>
+                <td class="text-center">{{rs.num}}</td>
+                <td class="title">
+                    {% if rs.grLayer %}
+                      <img src="images/blank.png" height="20" width="{{rs.grLayer}}" />
+                      <i class="ri-corner-down-right-line"></i>
+                    {% endif %}
+                   <a href="/view/{{rs.num}}">{{rs.title}}</a>
+                   {% if rs.memoCount != 0 %}
+                    ({{rs.memoCount}})
+                   {% endif %}
+                </td>
+                <td class="text-center">{{rs.writer}}</td>
+                <td class="text-center">{{rs.wdate}}</td>
+                <td class="text-center">{{rs.hit}}</td>
+            </tr>
+            {% endfor %}
+ 
+        </tobody>
+    </table>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-8">
+            <ul class="pagination justify-content-center">
+               
+            </ul>
+        </div>
+        <div class="col-md-3 text-right">
+            <a href="/" class="btn btn-secondary mr-4">목록</a>
+            <a href="/write" class="btn btn-secondary">글쓰기</a> 
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block indexScript %}
+<script src="js/paging.js"></script>
+<script>
+    $(function(){
+       $('.pagination').html(getPaging('{{maxList}}', '10', '{{totalCount}}', '{{page}}', "/"));
+    });
+</script>
+{% endblock %}

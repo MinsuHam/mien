@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label><input type="checkbox" class="chk">글씨변경</label>
+    <div class="box">테스트</div>
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        const chks = document.querySelectorAll('.chk');
+        chks.forEach((chk, index)=>{
+            chk.addEventListener('click', ()=>{
+                if(chk.checked){
+                   boxes[index].textContent = "(박스)"+boxes[index].textContent;
+                }else{
+                    boxes[index].textContent = "박스"; 
+                } 
+            });      
+        });
+    </script>
+</body>
+</html>
