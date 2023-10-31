@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const upload = require("../upload");
-const rmfile = require('../lib/removefile');
 const fs = require("fs-extra");
 
 //mysql 연결
@@ -47,7 +46,7 @@ router.get('/', (req, res) => {
 });
 
 router.get("/write", (req, res)=>{
-    res.render("write", { title: "게시판 글쓰기"});
+   res.render("write", { title: "게시판 글쓰기"});
 });
 
 router.post("/write", (req, res)=>{
@@ -57,16 +56,14 @@ router.post("/write", (req, res)=>{
       0, 1, rs.writer, 'guest', 
       rs.pass,
       rs.title,
-      rs.content,
-      rs.imnum
+      rs.content
    ], (err, res, fields)=> {
       if(err) {
         console.log(err);
       }else{
          console.log(res.insertId);
          sql = "update ndboard set ? where num ="+res.insertId;
-         const sql2 = "update ndfile set bbs_num="+res.insertId;
-         conn.query(sql, { orNum: res.insertId }, 
+         conn.query(sql, { orNum: res.insertId },
          (err, res,fields)=>{
             if(err) 
               console.log(err);
@@ -74,48 +71,60 @@ router.post("/write", (req, res)=>{
                 console.log('업데이트 성공');
             }
          });
-         conn.query(sql2);
       }
    });
    res.redirect('/');
 });
 
+//이미지 삽입
 router.post("/write/imginsert", upload.single("img"), async(req, res, next)=>{
-    try{
-      let imnum, sql;
+   try{
+      let imgurl, imnum, sql;
       console.log(req.file);
-      
-      if(req.file !== undefined){
-        if(req.body.imnum){
-           imnum = req.body.imnum;
-        }else{ 
-           imnum = new Date().getTime();
-        }   
-        sql = "insert into ndfile (filename, orfilename, mimetype, filesize, imnum) values (?,?,?,?,?)";
-        conn.query(sql, [
-           req.file.filename,
-           req.file.originalname,
-           req.file.mimetype,
-           req.file.size,
-           imnum
-        ], (err, rs, fields)=>{
-            if(err){
-               console.log(err);
-            }else{
-               console.log(rs.insertId);
-               const data = {
-                  imnum, 
-                  imgurl: req.file.filename
-               }; 
-               res.json(data);            
-            }
-        });
-     
+      if(req.file !== undefiend) {
+         if(req.body.imnum) {
+            imnum = req.body.imnum;
+         }
+         imnum = new Date().getTime(); 
       }
-    }catch(err){
+      console.log(req.body);
+      if(req.file !== undefined){
+         imgurl = req.file.filename;
+         imnum = new Date().getTime(); 
+         sql = "insert into ndfile (filename, orfilename, mimetype, filesize, imnum) values (?,?,?,?,?)";
+         const sql2 = "update ndfile set bbs_num =" + res.insertId;
+         conn.query(sql, { ornum: res.insertId}, (err, rs, fields) => {
+            if(err) {
+               console.log(err);
+            } else {
+               console.log(rs.insertId);
+            }
+         });
+         const data = {
+            imnum,
+            imgurl: req.file.filename,
+         };
+         res.json(data);
+      }
+   }catch(err){
       console.error(err);
-    }
-});
+   }
+}); 
+
+/* //이미지 삭제
+router.post("/write/imginsert", upload.single("img"), async(req, res, next) => {
+   let imgurl;
+   imgurl = req.file.filename;
+   if(fs.existsSync("/uplaod" + imgurl)) {
+      try {
+         fs.unlinkSync("/upload" + imgurl);
+         console.log("이미지가 삭제되었습니다.");
+      }
+      catch(error) {
+         console.error(err);
+      }
+   }
+}); */
 
 router.get("/view/:num", (req, res)=>{
    const { num } = req.params;
@@ -156,9 +165,10 @@ router.post("/edit/:num", (req, res)=>{
     const { num } = req.params;
     const rs = req.body;
     const sql = "update ndboard set ? where num = ?";
+
     conn.query(sql,[{ 
             title: rs.title,
-            contents: rs.content  
+            contents: rs.content
         }, num],
         (err, res,fields)=>{
            if(err) 
@@ -181,7 +191,7 @@ router.post("/pwdlogin", (req, res) => {
            sql = "update ndboard set ? where num = ?";
            conn.query(sql,[{ 
                   title: title,
-                  contents: content  
+                  contents: content
            }, num],
            (err, fields)=>{
               if(err) {
@@ -213,40 +223,6 @@ router.post("/del", (req, res)=>{
       }else{
          if(row[0].ct > 0) {
             //삭제쿼리 작성
-            //파일을 읽어서 comment 있는지 확인, 첨부파일 있는지 확인
-            const sql1 = "select * from ndboard where num = ?";
-            const ornum = row[0].num;
-            conn.query(sql1, delnum, (err, row, ornum) => {
-               if(err) {
-                  console.log(err);
-               } else {
-                  if(row[0].memocount > 0) {
-                     conn.query('delete from ndboard_comment where bbs_num = '+ row[0].num);
-                  }
-                  //파일이 있는지 읽어 옴
-                  const sql2 = "select * from ndfile where bbs_num = "+ row[0].num;
-                  conn.query(sql2, (err, rs, fields) => {
-                     if(rs.length > 0) {
-                        const deldir = './data/image';
-
-                        for(let r of rs) {
-                           //파일 삭제 로직이 들어 갈 부분
-                           let filePath = deldir + "/" + r.filename;
-                           console.log(r.filename);
-                           rmfile(filePath, () => {
-                              console.log("파일 삭제 완료");
-                           });
-                        }
-                        conn.query('delete from ndboard_comment where bbs_num = '+ row[0].num);
-                     }
-                  });
-               }
-            });
-            //1. 코멘트 삭제
-            //2. 파일 삭제
-            //3. 본문 삭제
-
-
             sql = "delete from ndboard where num = ?";
             conn.query(sql, delnum, (err, fields)=>{
                if(err){
@@ -278,7 +254,7 @@ router.get("/rewrite/:num", (req, res)=>{
    })
 })
 .post("/rewrite", (req, res)=>{
-   const { ornum, grnum, grlayer, writer, pass, title, content } = req.body;
+   const { ornum, grnum, grlayer, writer, pass, title, contents } = req.body;
    const userid = "guest";  //나중에 회원제 만들면서 수정예정
    //목록의 grNum 이 받은 grNum 보다 클 경우 하나씩 업데이트
    let sql = "update ndboard set grNum = grNum + 1 where orNum = ? and grNum > ?";

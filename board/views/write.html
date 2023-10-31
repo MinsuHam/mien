@@ -41,6 +41,7 @@
         <button type="submit" class="btn btn-secondary ml-3"> 전 송 </button>
     </div>  
     <input type="hidden" name="userid" value={{userid}} />
+    <input type="hidden" name="imnum" id="imnum"/>
 </form>
 
 {% endblock %}
@@ -65,7 +66,9 @@
 
     function upFile(file, editor) {
         data = new FormData();
+        const imnum = $('#imnum').val();
         data.append("img", file); //id img로 file form 데이터 추가
+        data.append('imnum', imnum);
         $.ajax({
             url: "/write/imginsert",
             type: "POST",
@@ -76,8 +79,11 @@
             processData: false,
             data: data,
             success: function(res){
+                console.log(res);
+                $('#imnum').val(res.num);
+
                 const imgurl = $("<img>").attr({
-                    'src': "/images/"+res,  //json 형태로 주소를 반환받아 넣는다.
+                    'src': "/images/"+res.imgurl,  //json 형태로 주소를 반환받아 넣는다.
                     'crossorigin': 'anonymous' //cors 에러 방지
                 });
                 $("#content").summernote("insertNode", imgurl[0]);

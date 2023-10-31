@@ -1,0 +1,13 @@
+npx create-next-app firstweb
+
+
+
+ndfile
+num - 자동증가
+bbs_num - board의 num값
+filename - 새 파일
+orfilenmae - 원래 파일이름
+mimetype - 확장자 
+size - 파일 사이즈
+imnum - 부여할 임시번호
+wdate - 날짜
